@@ -11,13 +11,20 @@ export default class Menu extends Component {
 
   constructor() {
     super();
-    this.state = { toggled: false };
+    this.state = { isOpen: false };
     this.toggleSideMenu = this.toggleSideMenu.bind(this);
+    this.updateMenuState = this.updateMenuState.bind(this);
   }
 
   toggleSideMenu() {
     this.setState({
-      toggled: !this.state.toggled,
+      isOpen: !this.state.isOpen,
+    });
+  }
+
+  updateMenuState(isOpen) {
+    this.setState({
+      isOpen,
     });
   }
 
@@ -29,10 +36,13 @@ export default class Menu extends Component {
         </List>
       </View>
     );
+
     return (
       <SideMenu
-        MenuComponent={MenuComponent}
-        toggled={this.state.toggled}
+        menu={MenuComponent}
+        onChange={this.updateMenuState}
+        isOpen={this.state.isOpen}
+        acceptPan={false}
       >
         <View style={{backgroundColor: '#ccc', flex: 1}}>
           <Header onMenuPress={this.toggleSideMenu} />

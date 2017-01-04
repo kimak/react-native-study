@@ -1,5 +1,5 @@
 {
-  "name": "reactNativeStudy",
+  "name": "react-native-study",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
   "dependencies": {
     "react": "~15.4.0-rc.4",
     "react-native": "0.38.0",
-    "react-native-elements": "^0.7.0",
+    "react-native-elements": "^0.9.0",
     "react-native-navbar": "^1.5.4",
     "react-native-vector-icons": "^3.0.0",
     "whatwg-fetch": "^2.0.1"
