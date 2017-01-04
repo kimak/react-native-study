@@ -42,7 +42,6 @@ export default class Menu extends Component {
         menu={MenuComponent}
         onChange={this.updateMenuState}
         isOpen={this.state.isOpen}
-        acceptPan={false}
       >
         <View style={{backgroundColor: '#ccc', flex: 1}}>
           <Header onMenuPress={this.toggleSideMenu} />

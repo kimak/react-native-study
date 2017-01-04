@@ -19,8 +19,8 @@ export default class TabBar extends Component {
         <Tab
           selected={selectedTab === 'home'}
           title={'HOME'}
-          renderIcon={() => <Icon name="whatshot" size={26} />}
-          renderSelectedIcon={() => <Icon name="whatshot" size={26} />}
+          renderIcon={() => <Icon name="explore" size={26} />}
+          renderSelectedIcon={() => <Icon name="explore" color="#517fa4" size={26} />}
           onPress={() => this.changeTab('home')}
         >
           <Text>Hello React Native.</Text>
@@ -28,8 +28,11 @@ export default class TabBar extends Component {
         <Tab
           selected={selectedTab === 'about'}
           title={'ABOUT'}
-          renderIcon={() => <Icon name="important-devices" size={26} />}
-          renderSelectedIcon={() => <Icon name="important-devices" size={26} />}
+          renderIcon={() => <Icon name="ios-cafe" type="ionicon" size={26} />}
+          renderSelectedIcon={() => <Icon
+            name="ios-cafe" type="ionicon"
+            color="#517fa4" size={26}
+          />}
           onPress={() => this.changeTab('about')}
         >
           <Text>About</Text>
